@@ -1,0 +1,15 @@
+body * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    height: calc(100vh - 150px);
+    padding: 50px;
+    border: 7px solid #1D7F21;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
