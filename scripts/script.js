@@ -6,14 +6,5 @@ htmlBody.addEventListener('mousemove', dynaBack)
 
 function dynaBack(e){
   console.log(e)
-  document.body.style.background = `linear-gradient(${e.screenX}deg,rgba(0,${e.screenX/4},0,.3),white,rgba(0,${e.screenY/4},0,.3))`
+  document.body.style.background = `linear-gradient(195deg,rgba(0,${e.screenX/2},0,.3),white,rgba(0,${e.screenY/2},0,.5))`
 }
-
-
-
-/* idea for random angle
-
-gradientAngle() {
-  return Math.floor(Math.random() * 100)
-}
-*/
