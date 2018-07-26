@@ -2,9 +2,21 @@ body * {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-size: 43px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
     position: relative;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 130px);
     padding: 50px;
     border: 7px solid #1D7F21;
     display: flex;
@@ -20,20 +32,108 @@ footer {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-
 }
+
+.dev ul {
+  list-style-type: none;
+}
+
+.dev li {
+   display: block;
+   padding: 0;
+   margin: 0;
+}
+
+.dev a {
+  font-size: 24px;
+  margin: 0 3px;
+  padding: 0;
+  color: black;
+  vertical-align: middle;
+}
+
+.project {
+  /* display: none; */
+  /* visibility: hidden; */
+  margin: 5px 0px 5px 24px;
+  transition: all 1s ease;
+  overflow: hidden;
+  height: auto;
+  max-height: 0;
+}
+
+.project.active {
+  max-height: 100px;
+  transition: all 2s ease;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid green;
+  border-right: 10px solid transparent;
+  background-color: transparent;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+}
+
+.arrow.active {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid green;
+  vertical-align: middle;
+  padding: 0;
+  background-color: transparent;
+  transition: .5s;
+}
+
+.arrow:hover {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px groove green;
+  border-right: 10px solid transparent;
+}
+
+.arrow.active:hover {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px groove green;
+}
+
+button:focus {outline:0;}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 6s ease-out;
+}
+
 .footer ul {
   display: inline-block;
   vertical-align: baseline;
   padding: 0;
+  -webkit-animation: NAME-YOUR-ANIMATION 5s infinite;
+  -moz-animation:    NAME-YOUR-ANIMATION 5s infinite;
+  -o-animation:      NAME-YOUR-ANIMATION 5s infinite;
+  animation:         NAME-YOUR-ANIMATION 5s infinite;
 }
 
 .footer ul li {
   display: inline-block;
   list-style-type: none;
   padding: 0 30px 0px 0px;
-  font-size: 18px;
+  font-size: 20px;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -69,3 +169,36 @@ a:active {
   text-decoration-color: #1D7F21
   color: #9E9E9E;
 }
+
+/* // This goes inside the css class {} to denote which animation is being invoked / when / how
+-webkit-animation: 4s linear 0s infinite alternate move_eye;
+        animation: 4s linear 0s infinite alternate move_eye;
+
+//This is standalone for defining the animation of choice ("move_eye")
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+ */
+/*
+ @-webkit-keyframes NAME-YOUR-ANIMATION {
+   0%   { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ @-moz-keyframes NAME-YOUR-ANIMATION {
+   0%   { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ @-o-keyframes NAME-YOUR-ANIMATION {
+   0%   { opacity: 0; }
+   100% { opacity: 1; }
+ }
+ @keyframes NAME-YOUR-ANIMATION {
+   0%   { opacity: 0; }
+   100% { opacity: 1; }
+ } */
+/*
+ #box {
+  -webkit-animation: NAME-YOUR-ANIMATION 5s infinite;
+  -moz-animation:    NAME-YOUR-ANIMATION 5s infinite;
+  -o-animation:      NAME-YOUR-ANIMATION 5s infinite;
+  animation:         NAME-YOUR-ANIMATION 5s infinite;
+} */
